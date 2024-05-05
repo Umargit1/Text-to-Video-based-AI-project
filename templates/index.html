@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image and Text</title>
+    <style>
+        body {
+            background-color: #f2f2f2; /* Light grey background */
+        }
+        form {
+            background-color: white; /* White background for the form */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            max-width: 500px; /* Limiting form width */
+            margin: 0 auto; /* Centering the form horizontally */
+        }
+        h1 {
+            text-align: center; /* Centering the heading */
+        }
+        label {
+            display: block; /* Display labels in block format */
+            margin-bottom: 5px;
+        }
+        input[type="file"], textarea {
+            width: 100%; /* Make file input and textarea full width */
+            padding: 8px; /* Adding padding for better spacing */
+            margin-bottom: 10px; /* Adding margin below input fields */
+            border-radius: 5px; /* Rounded corners for input fields */
+            border: 1px solid #ccc; /* Adding a border for input fields */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+        }
+        input[type="submit"] {
+            width: 100%; /* Make submit button full width */
+            padding: 10px; /* Adding padding for better appearance */
+            border: none; /* Remove border */
+            background-color: #007bff; /* Blue background color */
+            color: white; /* White text color */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Image and Text</h1>
+    <form action="/process" method="post" enctype="multipart/form-data">
+        <label for="image">Upload Image:</label><br>
+        <input type="file" id="file" name="file"><br><br>
+        <label for="text">Enter Text:</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
